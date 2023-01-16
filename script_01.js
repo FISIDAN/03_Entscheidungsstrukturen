@@ -54,17 +54,54 @@ console.log("------------------");
 /************ IF - ELSE IF  ************/
 
 // mit alternativen Fällen (älter, jünger, gleich alt)
-if (isJohnOlder)
+// if (isJohnOlder)
+// {
+//     console.log("John ist älter.");
+// } 
+// // < -----1 bis n Alternativen
+// else if(isJohnEqual)
+// { 
+//     console.log("John ist gleich alt.")
+// }
+// // < -----
+// else
+// {
+//     console.log("John ist jünger.")    
+// }
+
+
+
+/****** Fallunterscheidung / SWITCH|CASE 1 ******/
+
+const firstName = "Jane";
+let job;
+
+// job = "driver";     // .. fährt TAXI! / UBER
+// job = "diver";      // .. taucht im Rhein! 
+// job = "artist";     // .. malt ein Bild!
+// job = "pilot";      // .. macht etwas anderes! --> default
+// job = "teacher";    // .. unterrichtet!
+// job = "instructor";  // .. unterrichtet!
+
+switch (job)
 {
-    console.log("John ist älter.");
-} 
-// < -----1 bis n Alternativen
-else if(isJohnEqual)
-{ 
-    console.log("John ist gleich alt.")
-}
-// < -----
-else
-{
-    console.log("John ist jünger.")    
+    case "driver":
+        console.log("Jane fährt Taxi!");
+        break;
+    case "diver":
+        console.log("Jane taucht im Rhein!");
+        break;
+    case "artist":
+        console.log("Jane malt ein Bild!");
+        break;
+    case "pilot":
+        console.log("Jane fliegt ein Flugzeug!");
+        break;
+    case "teacher":
+    case "instructor": //hier wird das Gleiche ausgegeben, beide cases sind also ODER-verknüpft
+        console.log("Jane unterrichtet!");
+        break;
+    default:
+        console.log("Jane macht etwas anderes!")
+        break;
 }
